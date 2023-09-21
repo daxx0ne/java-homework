@@ -19,12 +19,20 @@ public class IntStack {
 
     /* 스택에 값을 push(추가) */
     public int push(int entry) {
+        if (isFull()) {
+            System.out.println("스택이 다 찼습니다.");
+            return -1;
+        }
         int_array[++stack_top] = entry;
         return entry;
     }
 
     /* 스택에서 값을 pop(제거 및 반환) */
     public int pop() {
+        if (isEmpty()) {
+            System.out.println("스택이 비어 있습니다.");
+            return -1;
+        }
         return int_array[stack_top--];
     }
 
@@ -44,8 +52,8 @@ public class IntStack {
             System.out.println(" ");
             return;
         }
-        for (int i = stack_top; i >= 0; i--) { // Print in reverse order
-            System.out.printf("%3d ", int_array[i]);
+        for (int i = stack_top; i >= 0; i--) {
+            System.out.printf("%3d ", int_array[i]); // 고정 폭으로 정렬하여 출력
         }
     }
 }
