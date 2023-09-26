@@ -263,6 +263,7 @@ public class Compare_Sorting_Algorithms {
             System.out.printf("After insertion_sorting, size = %d, offset = %d\n", big_size, offset);
             printBigArraySample(bigRandIntArray, big_size,10, 2);
             System.out.printf("Insertion_sort() for intArray(size=%d) took %d milliseconds\n\n", big_size, elapsed_time_ms);
+
             /* 선택 정렬 경과시간 계산 */
             shuffle_array(bigRandIntArray, big_size);
             System.out.printf("Before selection_sorting, size = %d, offset = %d\n", big_size, offset);
