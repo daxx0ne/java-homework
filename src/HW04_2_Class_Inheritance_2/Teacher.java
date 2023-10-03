@@ -1,6 +1,6 @@
 package HW04_2_Class_Inheritance_2;
 
-/* 선생자 정보를 나타내는 클래스 */
+/* 선생님 정보를 나타내는 클래스 */
 public class Teacher extends Person implements TeacherActivity {
     String school; // 학교
     String major; // 전공
