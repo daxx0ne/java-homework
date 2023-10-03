@@ -1,6 +1,6 @@
 package HW04_1_Class_Inheritance_1;
 
-/* 추상 클래스 */
+/* 차량 정보 추상 클래스 */
 public abstract class Vehicle implements I_Drive {
     private String v_type;
     private int eng_capa;

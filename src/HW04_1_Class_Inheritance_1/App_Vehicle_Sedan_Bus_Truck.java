@@ -1,5 +1,5 @@
 /*
- * Homework 4.1 class 간의 상속 관계
+ * Homework 4.1 class Vehicle, Sedan, Bus, Truck
  * 이름: 박다원
  * 학번: 21912154
  */
