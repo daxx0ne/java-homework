@@ -1,5 +1,5 @@
 /*
- * Homework 5.1 class Mtrx, 배열, 파일 입출력
+ * Homework 5.2 class Mtrx, 배열, 파일 입출력
  * 이름: 박다원
  * 학번: 21912154
  */
