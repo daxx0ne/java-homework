@@ -1,0 +1,27 @@
+Initial state of students : Total 5 students :
+Student(name:   Kim, reg_id: 190101, school:   YNU, dept:   ICE, st_id: 11111, GPA: 97.89)
+Student(name:   Lee, reg_id: 201215, school:    DG, dept:    ME, st_id: 12222, GPA: 89.15)
+Student(name:  Park, reg_id: 210307, school:    GB, dept:    CS, st_id: 20233, GPA: 92.65)
+Student(name:  Hong, reg_id: 220607, school:   YNU, dept:    CH, st_id: 20567, GPA: 95.32)
+Student(name:  Yoon, reg_id: 180425, school:   ABC, dept:    PH, st_id: 13555, GPA: 92.76)
+
+After sorting by name : Total 5 students :
+Student(name:  Hong, reg_id: 220607, school:   YNU, dept:    CH, st_id: 20567, GPA: 95.32)
+Student(name:   Kim, reg_id: 190101, school:   YNU, dept:   ICE, st_id: 11111, GPA: 97.89)
+Student(name:   Lee, reg_id: 201215, school:    DG, dept:    ME, st_id: 12222, GPA: 89.15)
+Student(name:  Park, reg_id: 210307, school:    GB, dept:    CS, st_id: 20233, GPA: 92.65)
+Student(name:  Yoon, reg_id: 180425, school:   ABC, dept:    PH, st_id: 13555, GPA: 92.76)
+
+After sorting by st_id : Total 5 students :
+Student(name:   Kim, reg_id: 190101, school:   YNU, dept:   ICE, st_id: 11111, GPA: 97.89)
+Student(name:   Lee, reg_id: 201215, school:    DG, dept:    ME, st_id: 12222, GPA: 89.15)
+Student(name:  Yoon, reg_id: 180425, school:   ABC, dept:    PH, st_id: 13555, GPA: 92.76)
+Student(name:  Park, reg_id: 210307, school:    GB, dept:    CS, st_id: 20233, GPA: 92.65)
+Student(name:  Hong, reg_id: 220607, school:   YNU, dept:    CH, st_id: 20567, GPA: 95.32)
+
+After sorting by GPA : Total 5 students :
+Student(name:   Kim, reg_id: 190101, school:   YNU, dept:   ICE, st_id: 11111, GPA: 97.89)
+Student(name:  Hong, reg_id: 220607, school:   YNU, dept:    CH, st_id: 20567, GPA: 95.32)
+Student(name:  Yoon, reg_id: 180425, school:   ABC, dept:    PH, st_id: 13555, GPA: 92.76)
+Student(name:  Park, reg_id: 210307, school:    GB, dept:    CS, st_id: 20233, GPA: 92.65)
+Student(name:   Lee, reg_id: 201215, school:    DG, dept:    ME, st_id: 12222, GPA: 89.15)
