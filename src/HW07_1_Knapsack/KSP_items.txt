@@ -1,0 +1,7 @@
+6
+0_clock 175 10
+1_painting 90 9
+2_radio 20 4
+3_vase 50 2
+4_book 10 1
+5_computer 200 20
