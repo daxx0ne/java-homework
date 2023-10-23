@@ -1,0 +1,64 @@
+BinarySearchTree (BST_IntegerEntry, num_entry=6) : 
+         5
+      4
+   3
+2
+   1
+      0
+BinarySearchTree (BST_IntegerEntry, num_entry=5) : 
+      5
+   4
+3
+   1
+      0
+BinarySearchTree (BST_IntegerEntry, num_entry=4) : 
+   5
+4
+   1
+      0
+BinarySearchTree (BST_IntegerEntry, num_entry=3) : 
+   5
+1
+   0
+BinarySearchTree (BST_IntegerEntry, num_entry=2) : 
+5
+   0
+BinarySearchTree (BST_IntegerEntry, num_entry=1) : 
+0
+BinarySearchTree (BST_IntegerEntry) is Empty !!
+BinarySearchTree (BST_StringEntry, num_entry=7) : 
+         G
+      F
+   E
+      D
+C
+   B
+      A
+BinarySearchTree (BST_StringEntry, num_entry=6) : 
+         G
+      F
+   E
+D
+   B
+      A
+BinarySearchTree (BST_StringEntry, num_entry=5) : 
+      G
+   F
+E
+   B
+      A
+BinarySearchTree (BST_StringEntry, num_entry=4) : 
+   G
+F
+   B
+      A
+BinarySearchTree (BST_StringEntry, num_entry=3) : 
+   G
+B
+   A
+BinarySearchTree (BST_StringEntry, num_entry=2) : 
+G
+   A
+BinarySearchTree (BST_StringEntry, num_entry=1) : 
+A
+BinarySearchTree (BST_StringEntry) is Empty !!
