@@ -26,17 +26,11 @@ public class Thesaurus {
     // 동의어 목록을 문자열로 반환하는 메서드
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(keyword).append(" [").append(type).append("]: {");
-
-        for (int i = 0; i < list_thesaurus.size(); i++) {
-            sb.append(list_thesaurus.get(i));
-            if (i < list_thesaurus.size() - 1) {
-                sb.append(", ");
-            }
+        StringBuilder str = new StringBuilder(String.format("%5s [%3s] : {", this.keyword, this.type));
+        for (String w : this.list_thesaurus) {
+            str.append(w).append(", ");
         }
-
-        sb.append("}");
-        return sb.toString();
+        str.append("}");
+        return str.toString();
     }
 }

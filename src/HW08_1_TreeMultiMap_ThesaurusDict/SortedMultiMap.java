@@ -8,10 +8,10 @@ class SortedMultiMap<K, V> {
 
     // 데이터 추가
     public void put(K key, V value) {
-        if (!sortedMap.containsKey(key)) { // 키가 존재하지 않으면 새로운 키 생성 및 값 추가
-            sortedMap.put(key, new ArrayList<>());
+        sortedMap.computeIfAbsent(key, k -> new ArrayList<V>()); // computeIfAbsent: 키가 존재하지 않으면 새로운 키를 생성하고 값을 저장
+        if (!sortedMap.get(key).contains(value)) { // 키 값이 없는 경우에 값을 추가
+            sortedMap.get(key).add(value);
         }
-        sortedMap.get(key).add(value);
     }
 
     // 키 값 반환
@@ -19,8 +19,12 @@ class SortedMultiMap<K, V> {
         return sortedMap.get(key);
     }
 
-    // 키의 집합을 정렬하여 반환
+    // 모든 키의 집합을 정렬하여 반환
     public Set<K> keySet() {
         return sortedMap.keySet();
     }
+
+    // 엔트리 집합 반환
+    public Set<Map.Entry<K, Collection<V>>> entrySet() {
+        return sortedMap.entrySet(); }
 }
