@@ -22,17 +22,17 @@ public class MySQL_JDBCS_AcademicManagementSystem {
             System.out.println("Loading MySQL's JDBC driver successfully !!");
             System.out.flush();
 
-            // 연결 설정 부분 변경
+            // DB 연결
             conn_db_academic = DriverManager.getConnection("jdbc:mysql://localhost:3306/shoppingmall", user_name, passwd);
             System.out.println("Connected to jdbc:mysql://localhost:3306/shoppingmall");
 
-            // 테이블 생성 부분 변경
+            // 테이블 생성
             createTable(conn_db_academic, "tbl_member", "name VARCHAR(50), contact_point VARCHAR(20), address VARCHAR(100)");
             createTable(conn_db_academic, "tbl_product", "product_name VARCHAR(50), price DOUBLE, manufacturer VARCHAR(50)");
             createTable(conn_db_academic, "tbl_order", "order_number INT, purchaser VARCHAR(50), item VARCHAR(50), total_price DOUBLE");
             createTable(conn_db_academic, "tbl_cart", "customer VARCHAR(50), product_item VARCHAR(50)");
 
-            // 텍스트 파일로부터 초기 데이터 읽어오기
+            // 텍스트 파일로부터 데이터 읽기
             fget_and_insert_Data("/Users/daone/IdeaProjects/java-homework/src/HW11_1_MySQL_JDBC_AcademicManagementSystem/member_data.txt", conn_db_academic, "tbl_member", "name, contact_point, address");
             fget_and_insert_Data("/Users/daone/IdeaProjects/java-homework/src/HW11_1_MySQL_JDBC_AcademicManagementSystem/product_data.txt", conn_db_academic, "tbl_product", "product_name, price, manufacturer");
             fget_and_insert_Data("/Users/daone/IdeaProjects/java-homework/src/HW11_1_MySQL_JDBC_AcademicManagementSystem/order_data.txt", conn_db_academic, "tbl_order", "order_number, purchaser, item, total_price");
@@ -46,6 +46,7 @@ public class MySQL_JDBCS_AcademicManagementSystem {
         }
     }
 
+    // 테이블이 존재하는지 확인하는 메서드
     static boolean tableExistsSQL(Connection connection, String tableName) throws SQLException {
         PreparedStatement preparedStatement = connection.prepareStatement("SELECT count(*) "
                 + "FROM information_schema.tables " + "WHERE table_name = ?"
@@ -56,17 +57,18 @@ public class MySQL_JDBCS_AcademicManagementSystem {
         return resultSet.getInt(1) != 0;
     }
 
+    // 테이블 생성 알림 메서드
     static void createTable(Connection connection, String tableName, String columns) throws SQLException {
         if (!tableExistsSQL(connection, tableName)) {
             Statement stmt = connection.createStatement();
             String sql = "CREATE TABLE " + tableName + " (" + columns + ")";
-            int result = stmt.executeUpdate(sql);
             System.out.printf("Table (%s) is created\n", tableName);
         } else {
-            System.out.printf("Table (%s) is already existing\n", tableName);
+            System.out.printf("Table (%s) is already existing\n", tableName); // 테이블이 이미 존재함
         }
     }
 
+    // 데이터 삽입 메서드
     static void fget_and_insert_Data(String fileName, Connection connection, String tableName, String columns) throws FileNotFoundException, SQLException {
         try (Scanner fin = new Scanner(new File(fileName))) {
             while (fin.hasNext()) {
